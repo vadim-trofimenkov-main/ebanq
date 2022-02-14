@@ -1,0 +1,21 @@
+{
+  "name": "ebanq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "runAllTests": "npx cypress run",
+    "openCypress": "npx cypress open",
+    "chromeTestAll": "npm run runAllTests -- --browser chrome",
+    "recordDashboardTest": "npx cypress run --record --key cbd2b131-1cad-459b-bc0f-9a0c3391a008 --reporter mochawesome"
+  },
+  "author": "Vadim Trofimenkov",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.4.1",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^9.2.0",
+    "mochawesome": "^7.0.1",
+    "multiple-cucumber-html-reporter": "^1.19.0"
+  }
+}
