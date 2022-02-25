@@ -1,12 +1,22 @@
 {
-  "defaultCommandTimeout": 8000,
-  "pageLoadTimeout": 10000,
+  "defaultCommandTimeout": 10000,
+  "pageLoadTimeout": 12000,
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
   "reporter": "mochawesome",
+  "baseUrl": "https://demo.ebanq.com",
   "env": {
-    "baseUrl": "https://demo.ebanq.com/"
+    "apiSignInUrl": "https://api-demo.ebanq.com/users/public/v1/auth/signin",
+    "userName": "Demo-User",
+    "password": "Demo-Access1",
+    "adminName": "Bank-Admin",
+    "allure": true,
+    "allureResultsPath": "allure-report",
+    "allureAddVideoOnPass": true
   },
   "retries": {
     "runMode": 1,
     "openMode": 1
-  }
+  },
+  "projectId": "fedpxg"
 }

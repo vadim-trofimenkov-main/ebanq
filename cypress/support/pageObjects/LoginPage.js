@@ -1,29 +1,29 @@
 export default class LoginPage {
-  openPage() {
-    cy.visit(Cypress.env("baseUrl") + "log-in");
+  static openPage() {
+    cy.visit("/log-in");
   }
 
-  checkIsPageOpened() {
+  static checkIsPageOpened() {
     cy.get(".heading h1").should("be.visible").and("have.text", "Login");
   }
 
-  getUserName() {
+  static getUserName() {
     return cy.get('[placeholder="Enter username or email address"]');
   }
 
-  getPassword() {
+  static getPassword() {
     return cy.get('[placeholder="Enter password"]');
   }
 
-  clickSubmitButton() {
+  static clickSubmitButton() {
     cy.get("button.controls__submit").click();
   }
 
-  checkErrorFieldMessageIsDisplayed(message) {
+  static checkErrorFieldMessageIsDisplayed(message) {
     cy.get("label.error-word").should("be.visible").and("have.text", message);
   }
 
-  checkErrorAlertIsDisplayed() {
+  static checkErrorAlertIsDisplayed() {
     cy.get("div.error .sn-content")
       .should("be.visible")
       .and("have.text", "Wrong username or password.");

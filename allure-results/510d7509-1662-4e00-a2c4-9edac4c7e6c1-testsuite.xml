@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1645619153462' stop='1645619175862'>
+    <name>Login to Ebanq account</name>
+    <title>Login to Ebanq account</title>
+    <test-cases>
+        <test-case start='1645619153469' status='passed' stop='1645619159508'>
+            <name>Login to Ebanq account with correct credentials</name>
+            <title>Login to Ebanq account with correct credentials</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1645619159564' status='passed' stop='1645619168076'>
+            <name>Login to Ebanq account with incorrect credentials</name>
+            <title>Login to Ebanq account with incorrect credentials</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1645619168093' status='passed' stop='1645619171222'>
+            <name>Login to Ebanq account with empty username</name>
+            <title>Login to Ebanq account with empty username</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1645619171236' status='passed' stop='1645619173470'>
+            <name>Login to Ebanq account with empty password</name>
+            <title>Login to Ebanq account with empty password</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1645619173475' status='passed' stop='1645619175861'>
+            <name>Login to Ebanq account with username less than 4 chars</name>
+            <title>Login to Ebanq account with username less than 4 chars</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
