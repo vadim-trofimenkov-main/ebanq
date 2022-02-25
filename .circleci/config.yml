@@ -9,8 +9,6 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          requires:
-            - cypress/install
           record: true # record results on Cypress Dashboard
           parallel: true # split all specs across machines
           parallelism: 2 # use 2 CircleCI machines to finish quickly
