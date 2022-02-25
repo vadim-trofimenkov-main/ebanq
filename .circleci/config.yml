@@ -4,14 +4,23 @@ orbs:
 workflows:
   build:
     jobs:
+      - cypress/install:
+          cache-key: >-
+            cache-{{ arch }}-{{ .Branch }}-{{ checksum "ebanq/package.json"
+            }}
       - cypress/run:
+          yarn: true
+          cache-key: >-
+            cache-{{ arch }}-{{ .Branch }}-{{ checksum "ebanq/package.json"
+            }}
+          working_directory: ebanq
           record: true # record results on Cypress Dashboard
           parallel: true # split all specs across machines
           parallelism: 2 # use 2 CircleCI machines to finish quickly
           browser: chrome
+          store_artifacts: true
           post-steps:
             - store_test_results:
                 path: cypress/results
             - store_artifacts:
                 path: cypress/artifacts
-          store_artifacts: true
