@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 //https://www.npmjs.com/package/cypress-promise
-describe("Async/await suite", function () {
-  it("Async/await case", async function () {
+describe.skip("Async/await suite", function () {
+  it.skip("Async/await case", async function () {
     // const foo = await cy.wrap("foo").promisify();
     // const bar = await cy.wrap("bar").promisify();
     // expect(foo).to.equal("foo");
