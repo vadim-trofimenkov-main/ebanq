@@ -24,7 +24,3 @@ workflows:
             - store_test_results:
                 path: cypress/results
           store_artifacts: true
-      - allure/run:
-          requires:
-            - cypress/run
-          command: npx allure serve
