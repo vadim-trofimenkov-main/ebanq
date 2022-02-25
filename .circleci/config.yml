@@ -1,23 +1,7 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
-executors:
-  with-chrome:
-    docker:
-      - image: "cypress/browsers:node14.16.0-chrome90-ff88"
 workflows:
   build:
     jobs:
-      - cypress/run:
-          working_directory: cypress/ebanq
-          record: true # record results on Cypress Dashboard
-          parallel: true # split all specs across machines
-          parallelism: 2 # use 2 CircleCI machines to finish quickly
-          executor: with-chrome
-          browser: chrome
-          post-steps:
-            - store_test_results:
-                path: cypress/results
-            - store_artifacts:
-                path: cypress/artifacts
-          store_artifacts: true
+      - cypress/run
