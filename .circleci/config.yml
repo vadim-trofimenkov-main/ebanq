@@ -6,12 +6,12 @@ workflows:
     jobs:
       - cypress/install
       - cypress/run:
-          name: "cypress tests"
+          name: "Cypress-tests"
           requires:
             - cypress/install
           record: true # record results to Cypress Dashboard
           parallel: true # run tests in parallel
-          parallelism: 2 # use 3 CircleCI machines
+          parallelism: 2 # use 2 CircleCI machines
           group: Cypress tests # name this group 
           record: true
           store_artifacts: true
