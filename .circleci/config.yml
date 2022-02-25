@@ -13,7 +13,6 @@ workflows:
       - cypress/run:
           requires:
             - cypress/install
-          command: npx cypress run --record
           record: true # record results on Cypress Dashboard
           parallel: true # split all specs across machines
           parallelism: 2 # use 2 CircleCI machines to finish quickly
