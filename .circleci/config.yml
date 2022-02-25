@@ -20,5 +20,3 @@ workflows:
                 path: cypress/results/artifacts
             - store_test_results:
                 path: cypress/results
-      - generate allure report:
-          command: npx allure serve
