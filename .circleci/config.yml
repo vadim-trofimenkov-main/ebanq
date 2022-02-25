@@ -6,7 +6,7 @@ workflows:
     jobs:
       - cypress/install
       - cypress/run:
-          name: "Cypress-tests"
+          name: 'end-to-end tests'
           requires:
             - cypress/install
           record: true # record results to Cypress Dashboard
