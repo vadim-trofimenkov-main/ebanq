@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-02-23T12:16:55.098Z",
-    "end": "2022-02-23T12:17:08.053Z",
-    "duration": 12955,
+    "start": "2022-02-25T11:56:34.801Z",
+    "end": "2022-02-25T11:56:40.488Z",
+    "duration": 5687,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "d9699541-80aa-41d2-8746-aa9cd6801526",
+      "uuid": "0af551c3-4599-4bc0-a712-a9f88a22d269",
       "title": "",
-      "fullFile": "cypress/integration/transfer/transferTest.js",
-      "file": "cypress/integration/transfer/transferTest.js",
+      "fullFile": "cypress/integration/practice/xpath/xpathTest.js",
+      "file": "cypress/integration/practice/xpath/xpathTest.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "69a5e062-3c87-4bae-8b9a-98f53f4143f6",
-          "title": "Transfers",
+          "uuid": "6a04b0a9-d16f-4095-bbf6-256718d96cc6",
+          "title": "Xpath suite",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "transfer between accounts",
-              "fullTitle": "Transfers transfer between accounts",
+              "title": "xpath case",
+              "fullTitle": "Xpath suite xpath case",
               "timedOut": null,
-              "duration": 12836,
+              "duration": 5445,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "_TransfersPage.default.clickTransferBetweenAccountsButton();\n_TransfersPage.default.transfer(\"EBQ11113487654\", \"EBQ11223487456\", 500, \"Test operation\");\n_TransfersPage.default.checkTransactionSubmitted();",
+              "code": "cy.visit(\"/log-in\");\ncy.xpath(\"//*[contains(@class, 'heading')]//h1\").should(\"be.visible\").and(\"have.text\", \"Login\");\ncy.xpath('//*[@placeholder=\"Enter username or email address\"]').type(USERNAME);\ncy.xpath('//*[@placeholder=\"Enter password\"]').type(PASSWORD);\ncy.xpath(\"//button[contains(@class, 'controls__submit')]\").click();\ncy.xpath(\"//div[contains(@class, 'aside-bar__image')]\").should(\"be.visible\");",
               "err": {},
-              "uuid": "03e4ceec-df5c-4af5-8b8d-dab94ace64d3",
-              "parentUUID": "69a5e062-3c87-4bae-8b9a-98f53f4143f6",
+              "uuid": "fe75c5a4-08d4-4803-95ec-b5629f8ba9c8",
+              "parentUUID": "6a04b0a9-d16f-4095-bbf6-256718d96cc6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "03e4ceec-df5c-4af5-8b8d-dab94ace64d3"
+            "fe75c5a4-08d4-4803-95ec-b5629f8ba9c8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12836,
+          "duration": 5445,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -86,15 +86,4 @@
         "reportFilename": "mochawesome",
         "saveHtml": true,
         "saveJson": true,
-        "consoleReporter": "spec",
-        "useInlineDiffs": false,
-        "code": true
-      },
-      "version": "7.0.1"
-    },
-    "marge": {
-      "options": null,
-      "version": "6.0.1"
-    }
-  }
-}
+        "consoleReporter
