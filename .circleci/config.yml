@@ -9,7 +9,6 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          working_directory: /cypress/ebanq
           record: true # record results on Cypress Dashboard
           parallel: true # split all specs across machines
           parallelism: 2 # use 2 CircleCI machines to finish quickly
@@ -18,4 +17,6 @@ workflows:
           post-steps:
             - store_test_results:
                 path: cypress/results
+            - store_artifacts:
+                path: cypress/artifacts
           store_artifacts: true
